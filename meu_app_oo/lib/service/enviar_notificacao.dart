@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:meu_app_oo/classes/pessoa_abstract.dart';
 import 'package:meu_app_oo/enum/tipo_notificacao.dart';
 import 'package:meu_app_oo/service/impl/notificacao_SMS.dart';

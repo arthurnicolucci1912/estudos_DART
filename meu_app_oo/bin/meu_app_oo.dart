@@ -1,7 +1,7 @@
-import '../lib/classes/pessoa_fisica.dart';
-import '../lib/classes/pessoa_juridica.dart';
-import '../lib/enum/tipo_notificacao.dart';
-import '../lib/service/enviar_notificacao.dart';
+import 'package:meu_app_oo/classes/pessoa_fisica.dart';
+import 'package:meu_app_oo/classes/pessoa_juridica.dart';
+import 'package:meu_app_oo/enum/tipo_notificacao.dart';
+import 'package:meu_app_oo/service/enviar_notificacao.dart';
 
 void main(List<String> arguments) {
   var pessoafisica1 = new PessoaFisica("Arthur", "Sumaré", "12345",tiponotificacao: TipoNotificacao.EMAIL);
