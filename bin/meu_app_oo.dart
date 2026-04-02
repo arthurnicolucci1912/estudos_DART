@@ -1,10 +1,15 @@
-import 'package:meu_app_oo/classes/Pessoa.dart';
+import 'package:meu_app_oo/classes/pessoa.dart';
+import 'package:meu_app_oo/classes/pessoa_fisica.dart';
+import 'package:meu_app_oo/classes/pessoa_juridica.dart';
 
 void main(List<String> arguments) {
-  var p1 = new Pessoa();
+  var p1 = new Pessoa("Arthur", "Sumare");
   //as prop da classe não podem ficar expostas -> encapsulamento
-  p1.setNome("Arthur");
-  p1.setEndereco("Sumaré");
-  print(p1.getNome());
-  print(p1.getEndereco());
+  print(p1);
+
+  var pessoafisica1 = new PessoaFisica("Arthur", "Sumaré", "12345");
+  print(pessoafisica1);
+
+  var pessoajuridica1 = new PessoaJuridica("Arthur nico", "Campinas", "12837616238");
+  print(pessoajuridica1);
 }

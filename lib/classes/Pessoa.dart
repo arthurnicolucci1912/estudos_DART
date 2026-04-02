@@ -1,29 +1,42 @@
 //fazendo abstração da pessoa
 class Pessoa {
-  
   //Classes tem propriedades e métodos
   // quando for executado, o sinal "?" faz a propriedade iniciar como null
   // ou String nome = '';
 
-  String _nome= ''; 
-  String _endereco ='';
+  String _nome = '';
+  String _endereco = '';
+
+  //construtor
+  Pessoa(String nome, String endereco){
+    _nome = nome;
+    _endereco = endereco;
+  }
 
   //criando setters
-  void setNome(String nome){
+  void setNome(String nome) {
     _nome = nome;
   }
 
-  void setEndereco(String endereco){
+  void setEndereco(String endereco) {
     _endereco = endereco;
   }
 
   //getters
-  String getNome(){
+  String getNome() {
     return _nome;
   }
 
-  String getEndereco(){
+  String getEndereco() {
     return _endereco;
   }
 
+  //metodo para print
+  //sobrescrevendo toString 
+  //várias funções de mesmo nome que fazem coisas diferentes -> polimorfismo
+
+  @override
+  String toString() {
+    return {"Nome": _nome, "Endereco": _endereco}.toString(); // -> toString() da classe objects do dart
   }
+}
