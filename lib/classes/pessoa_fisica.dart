@@ -1,11 +1,12 @@
-import 'package:meu_app_oo/classes/pessoa.dart';
+import 'package:meu_app_oo/classes/pessoa_abstract.dart';
+import 'package:meu_app_oo/enum/tipo_notificacao.dart';
 
 class PessoaFisica extends Pessoa {
   String _cpf = '';
 
   //constructor
-  PessoaFisica(String nome, String endereco, String cpf)
-    : super(nome, endereco) {
+  PessoaFisica(String nome, String endereco, String cpf, {TipoNotificacao tiponotificacao = TipoNotificacao.NENHUM})
+    : super(nome, endereco, tiponotificacao: tiponotificacao) {
     _cpf = cpf;
   }
 
@@ -28,6 +29,7 @@ class PessoaFisica extends Pessoa {
       "Nome ": super.getNome(),
       "Endereço: ": super.getEndereco(),
       "CPF: ": _cpf,
+      "Tipo Notificação" : super.getTipoNotificacao()
     }.toString();
   }
 }
