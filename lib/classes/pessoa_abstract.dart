@@ -9,10 +9,17 @@ abstract class Pessoa {
 
   String _nome = '';
   String _endereco = '';
+  String _email = '';
+  String _celular = '';
+  String _token = '';
   TipoNotificacao _tipoNotificacao = TipoNotificacao.NENHUM;
 
   //construtor
-  Pessoa(String nome, String endereco, {TipoNotificacao tiponotificacao = TipoNotificacao.NENHUM}) {
+  Pessoa(
+    String nome,
+    String endereco, {
+    TipoNotificacao tiponotificacao = TipoNotificacao.NENHUM,
+  }) {
     _nome = nome;
     _endereco = endereco;
     _tipoNotificacao = tiponotificacao;
@@ -25,6 +32,18 @@ abstract class Pessoa {
 
   void setEndereco(String endereco) {
     _endereco = endereco;
+  }
+
+  void setEmail(String email) {
+    _email = email;
+  }
+
+  void setCelular(String celular) {
+    _celular = celular;
+  }
+
+  void setToken(String token) {
+    _token = token;
   }
 
   void setTipoNotificacao(TipoNotificacao tiponotificacao) {
@@ -40,6 +59,18 @@ abstract class Pessoa {
     return _endereco;
   }
 
+  String getEmail() {
+    return _email;
+  }
+
+  String getCelular() {
+    return _celular;
+  }
+
+  String getToken() {
+    return _token;
+  }
+
   TipoNotificacao getTipoNotificacao() {
     return _tipoNotificacao;
   }
@@ -53,7 +84,7 @@ abstract class Pessoa {
     return {
       "Nome": _nome,
       "Endereco": _endereco,
-      "Tipo Notificação" : _tipoNotificacao
+      "Tipo Notificação": _tipoNotificacao,
     }.toString(); // -> toString() da classe objects do dart
   }
 }
